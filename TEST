@@ -1,0 +1,11 @@
+import csv
+import requests
+from bs4 import BeautifulSoup
+
+title_and_url = 'https://news.ftv.com.tw/API/MetaInfo.aspx?id=2017802F06M1'
+news = requests.get(title_and_url)
+news.encoding='utf-8'
+clean_news = BeautifulSoup(news.text,"html.parser")
+
+clean_news
+
